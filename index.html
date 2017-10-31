@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #map {
+      height: 400px;
+      width: 40%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <header class="head">
+      <h2>ROUTE ROULETTE</h2>
+    </header>
+    <section class="input">
+      <form id>
+        <label>Enter min. difficulty in YDS</label>
+        <input type="text" placeholder="ex.: 5.14a" id='minDif'>
+        <label>Enter max. difficulty in YDS</label>
+        <input type="text" placeholder="ex.: 5.14b" id='maxDif'>
+        <label>Enter max. distance in miles</label>
+        <input type="text" placeholder="ex.: 20" id='maxDist'>
+        <button type="submit" id="routeSearch">
+          <i>SUBMIT</i>
+        </button>
+      </form>
+    </section>
+    <h3 class="mapLabel">Where You At???</h3>
+    <div id="floating-panel">
+      <input id="address" type="textbox" value="Yosemite, California">
+      <input id="submit" type="button" value="Geocode">
+    </div>
+    <div class="map" id="map">
+
+      <div id="map">
+
+      </div>
+    </div>
+    <div class="yourRoute">
+      <label>Go get on: </label>
+      <div class="allRouteInfo">
+        <div id="routeName"></div>
+        <div id="difficulty"></div>
+        <div id="location"></div>
+        <div id="type"></div>
+        <div id="quality"></div>
+        <div id="moreInfo"></div>
+      </div>
+    </div>
+    <script>
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz94wOE8t1livt2XPjcGYzHgbv1Bu2oew&callback=initMap">
+    </script>
+  </div>
+</body>
+
+</html>
