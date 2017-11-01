@@ -4,13 +4,17 @@ var toDoURL;
 var routeName;
 var routeURL;
 
+
+
 function appendCurrentProject(){
-  if (toDoName === null){
+  if (toDoName === null) {
     $('.currentProjName').append('Route Name: ' + '')
   }
   else{
     $('.currentProjName').append('Route Name: ' + toDo[0])
   }
+}
+function appendCurrentProjURL(){
   if (toDoURL === null){
     $('.toDoURL').append('Mountain Project Link: ' + '')
   }
@@ -19,15 +23,13 @@ function appendCurrentProject(){
     $('.toDoURL').append('Mountain Project Link: ' + toDo[1])
   }
 }
-appendCurrentProject()
+
+
+
 
 $(document).ready(function() {
 
-// var toDo = [];
-// var toDoName;
-// var toDoURL;
-// var routeName;
-// var routeURL;
+
 
   $('form').submit(function() {
 
@@ -56,12 +58,10 @@ $(document).ready(function() {
           stars: data.routes[i].stars,
           link: data.routes[i].url
         }
-        // console.log(routeObj['name'])
-        // console.log(routeObj)
+
         finalArr.push(routeObj)
       }
 
-      // console.log(finalArr);
       var routeResult = finalArr[Math.floor(finalArr.length * Math.random())];
       console.log(routeResult)
       $('#routeName').empty()
@@ -85,59 +85,31 @@ $(document).ready(function() {
   $("#toDo").on('click', function() {
     $('.currentProjName').empty();
     $('.toDoURL').empty();
-    // $('.toDoList').empty();
-    // $('.toDoURL').empty();
-    localStorage.setItem('Route Name', routeName)
-    localStorage.setItem('Mountain Proj. URL', routeURL)
+    if(routeName === undefined){
+      localStorage.setItem('Route Name', 'nothing yet')
+    }else{
+      localStorage.setItem('Route Name', routeName)
+    }
+    if(routeURL === undefined){
+      localStorage.setItem('Mountain Proj. URL', 'nothing yet')
+    }else{
+      localStorage.setItem('Mountain Proj. URL', routeURL)
+    }
     toDoName = localStorage.getItem('Route Name', routeName)
     toDoURL = localStorage.getItem('Mountain Proj. URL', routeURL)
     toDo.push(toDoName, toDoURL)
     $('.currentProjName').append('Route Name: ' + toDoName)
     $('.toDoURL').append('Mountain Project Link: ' + toDoURL)
-    // if(toDo[0] === null){
-    //   $('.currentProjName').append('Route Name: ' + '')
-    //   }
 
   })
 
   toDoName = localStorage.getItem('Route Name', routeName)
   toDoURL = localStorage.getItem('Mountain Proj. URL', routeURL)
   toDo.push(toDoName, toDoURL)
-  console.log(toDo);
-
-  // function appendCurrentProject(){
-  //   if (toDoName === null){
-  //     $('.currentProjName').append('Route Name: ' + '')
-  //   }
-  //   else{
-  //     $('.currentProjName').append('Route Name: ' + toDo[0])
-  //   }
-  //   if (toDoURL === null){
-  //     $('.toDoURL').append('Mountain Project Link: ' + '')
-  //   }
-  //   else
-  //   {
-  //     $('.toDoURL').append('Mountain Project Link: ' + toDo[1])
-  //   }
-  // }
+  appendCurrentProjURL()
   appendCurrentProject()
 });
-// function appendCurrentProject(){
-//   if (toDoName === null){
-//     $('.currentProjName').append('Route Name: ' + '')
-//   }
-//   else{
-//     $('.currentProjName').append('Route Name: ' + toDo[0])
-//   }
-//   if (toDoURL === null){
-//     $('.toDoURL').append('Mountain Project Link: ' + '')
-//   }
-//   else
-//   {
-//     $('.toDoURL').append('Mountain Project Link: ' + toDo[1])
-//   }
-// }
-// appendCurrentProject()
+
 
 var marker;
 var lat = ''
