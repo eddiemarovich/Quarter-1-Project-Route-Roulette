@@ -3,17 +3,11 @@
   padding: 0;
 }
 body{
-  /*display: flex;*/
   background-color: #c6f2d5 ;
   color: black;
-  font-family: blippo, fantasy;
+  font-family:  cursive;
 }
-.head{
-  grid-area: head;
-}
-.input{
-  grid-area: input;
-}
+
 .map{
   grid-area: map;
   margin: 0 auto 0 auto;
@@ -33,16 +27,3 @@ body{
   /*line-height: 30px;*/
   /*padding-left: ;*/
 }
-/*
-.grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);*/
-  /*grid-template-rows: repeat(4, 1fr);*/
-  /*grid-gap: 10px;
-  grid-template-areas:
-  'head head '
-  'input input'
-  'map map'
-
-  ;
-}*/
