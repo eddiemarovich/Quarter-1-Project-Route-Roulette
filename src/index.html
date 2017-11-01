@@ -29,14 +29,14 @@
         <label>Enter max. distance in miles</label>
         <input type="text" placeholder="ex.: 20" id='maxDist'>
         <button type="submit" id="routeSearch">
-          <i>SUBMIT</i>
+          <i>FIND RIGS</i>
         </button>
       </form>
     </section>
     <h3 class="mapLabel">Where You At???</h3>
     <div id="floating-panel">
       <input id="address" type="textbox" value="Yosemite, California">
-      <input id="submit" type="button" value="Geocode">
+      <input id="submit" type="button" value="Let's find you!">
     </div>
     <div class="map" id="map">
 
@@ -52,7 +52,17 @@
         <div id="location"></div>
         <div id="type"></div>
         <div id="quality"></div>
-        <div id="moreInfo"></div>
+        <div id="moreInfo" target="_blank "></div>
+      </div>
+    </div>
+    <div class="toDoButton">
+      <button type="button" id="toDo" name="button">Make this route your prijjity proj</button>
+    </div>
+    <div class="routeToDo">
+      <label>Current Projy: </label>
+      <div class="currentProjName">
+      </div>
+      <div class="toDoURL">
       </div>
     </div>
     <script>
