@@ -9,25 +9,25 @@
 
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="main.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <script type="text/javascript" src="js/materialize.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-  <style>
-    #map {
-      height: 400px;
-      width: 40%;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
+
+  <div class="grid">
     <header class="head">
       <h2>ROUTE ROULETTE</h2>
     </header>
     <section class="input">
-      <form id>
+      <h3 class="mapLabel">Where in the world are you??</h3>
+      <div id="floating-panel">
+        <input id="address" type="textbox" value="Yosemite, California">
+        <input id="submit" type="button" value="HERE I AM">
+      </div>
+      <br>
+      <form id="form">
         <label>Enter min. difficulty in YDS</label>
         <input type="text" placeholder="ex.: 5.14a" id='minDif'>
         <label>Enter max. difficulty in YDS</label>
@@ -35,49 +35,58 @@
         <label>Enter max. distance in miles</label>
         <input type="text" placeholder="ex.: 20" id='maxDist'>
         <button type="submit" id="routeSearch">
-          <i>FIND RIGS</i>
+          <a>FIND ROUTES</a>
         </button>
       </form>
     </section>
-    <h3 class="mapLabel">Where in the world are you??</h3>
-    <div id="floating-panel">
-      <input id="address" type="textbox" value="Yosemite, California">
-      <input id="submit" type="button" value="Let's find you!">
-    </div>
-    <div class="map" id="map">
-
+    <div class="map">
       <div id="map">
+      </div>
+    </div>
+    <div class="routeInfo">
+      <div class="yourRoute">
+        <label>Go get on: </label>
+        <div class="allRouteInfo">
+          <div id="routeName"></div>
+          <div id="difficulty"></div>
+          <div id="location"></div>
+          <div id="type"></div>
+          <div id="quality"></div>
+          <div id="moreInfo" target="_blank "></div>
+        </div>
+      </div>
+      <div class="toDoButton">
+        <button type="button" id="toDo" name="button">I think I'll try this thing</button>
+      </div>
+      <div class="routeToDo">
+        <label>Current Project: </label>
+        <div class="currentProjName">
+        </div>
+        <div class="toDoURL">
+        </div>
+      </div>
+    </div>
+  <footer class="foot">
+    <div class="support">
+      <h3>Powered By</h3>
+      <h4>Mountain Project</h4>
+      <h4>Google Maps</h4>
+    </div>
+  </footer>
+  </div>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz94wOE8t1livt2XPjcGYzHgbv1Bu2oew&callback=initMap">
+  </script>
 
-      </div>
-    </div>
-    <div class="yourRoute">
-      <label>Go get on: </label>
-      <div class="allRouteInfo">
-        <div id="routeName"></div>
-        <div id="difficulty"></div>
-        <div id="location"></div>
-        <div id="type"></div>
-        <div id="quality"></div>
-        <div id="moreInfo" target="_blank "></div>
-      </div>
-    </div>
-    <div class="toDoButton">
-      <button type="button" id="toDo" name="button">I think I'll try this thing</button>
-    </div>
-    <div class="routeToDo">
-      <label>Current Project: </label>
-      <div class="currentProjName">
-      </div>
-      <div class="toDoURL">
-      </div>
-    </div>
-    <script>
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz94wOE8t1livt2XPjcGYzHgbv1Bu2oew&callback=initMap">
-    </script>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+  <!-- <footer class="foot">
+    <div class="support">
+      <h3>Powered By</h3>
+      <h4>Mountain Project</h4>
+      <h4>Google Maps</h4>
+    </div>
+  </footer> -->
 </body>
 
 </html>

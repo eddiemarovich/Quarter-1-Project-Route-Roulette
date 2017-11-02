@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Galvanize Delivers</title>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="main.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="grey darken-4" role="navigation">
+    <div class="left-align"><a id="logo-container" href="index.html" class="brand-logo">Galvanize Delivers</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="html2.html">Order Delivery</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="html2.html">Order Delivery</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">restaurant_menu</i></a>
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- The whole enchilada -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- //left column// -->
+
+        <div class="col s12 m6">
+
+          <h3>Menu</h3>
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/burger.jpg">
+                </div>
+                <div class="card-content">
+                  <h4>Quadruple Quarter Pounder</h4>
+                  <h5 class="fine_print">fries not included</h5>
+                  <p>$43.43</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Add to cart</a>
+                </div>
+              </div>
+              </div>
+              <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/ribs.jpg">
+                </div>
+                <div class="card-content">
+                  <h4>Barry's Beautiful Baby Back (B)ribs</h4>
+                  <h5 class="fine_print">with beans</h5>
+                  <p>$120</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Add to cart</a>
+                </div>
+              </div>
+              </div>
+              <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/pizza.jpg">
+                </div>
+                <div class="card-content">
+                  <h4>Pile of Arugula on Cheesy Bread</h4>
+                  <h5 class="fine_print">mostly just arugula</h5>
+                  <p>$45</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Add to cart</a>
+                </div>
+              </div>
+              </div>
+              <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/ice_cream.jpg">
+                </div>
+                <div class="card-content">
+                  <h4>Meat Lover's Ice Cream Sandwich</h4>
+                  <h5 class="fine_print">free with purchase of 100 or more burgers</h5>
+                  <p>$65</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">Add to cart</a>
+                </div>
+              </div>
+              </div>
+
+            </div>
+
+
+        <!-- right column -->
+
+        <div class="col s12 m6 l6">
+          <h3>Order Summary</h3>
+          <div class="col s12 m12 ">
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th class="right-align">Item</th>
+                  <th class="right-align">Item Price</th>
+                  <td class="right-align" id="item-price"></td>
+                </tr>
+              </thead>
+              <tbody>
+                <tb class="right-align"></tb>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="right-align">Subtotal</td>
+                  <td class="right-align" id="subtotal"></td>
+                </tr>
+                <tr>
+                  <td class="right-align">Tax</td>
+                  <td class="right-align" id="tax"></td>
+                </tr>
+                <tr>
+                  <td class="right-align">Total</td>
+                  <td class="right-align" id="total"></td>
+                </tr>
+              </tfoot>
+            </table>
+
+          </div>
+          <form>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate">
+                <label for="icon_prefix">Name</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                <input id="icon_telephone" type="tel" class="validate">
+                <label for="icon_telephone">Telephone</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                <textarea id="address" class="materialize-textarea"></textarea>
+                <label for="address" data-error="required">Address</label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- </div> -->
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer red lighten-1">
+    <div class="row footer">
+      <div class="col l6 s12">
+        <h5 class="white-text">Company Bio</h5>
+        <p class="grey-text text-lighten-4">We deliver the goods to where you need them most; your face.</p>
+
+
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text"></h5>
+
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Home</a></li>
+          <li><a class="white-text" href="#!">Order</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        © Galvanize Delivers
+      </div>
+  </footer>
+
+
+
+
+</body>
+
+</html>
