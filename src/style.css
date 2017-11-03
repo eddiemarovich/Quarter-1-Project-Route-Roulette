@@ -6,7 +6,7 @@
 }
 body{
   /*display: flex;*/
-  height: 100vh;
+  height: 100%;
   align-content: center;
   /*opacity: 0.5;*/
   background-image: url(newzion.jpg) ;
@@ -24,6 +24,7 @@ form{
   height: 100px;
 }
 .head{
+  color: white;
   background: #0066cc;
   grid-area: hd;
   text-align: center;
@@ -39,8 +40,6 @@ form{
 #map{
   width: 100%;
   height: 100%;
-  /*padding-left: 50px;*/
-  /*padding-right: 50px;*/
 }
 .map{
   background-color: blue;
@@ -61,6 +60,7 @@ form{
   margin-left: 5px;
 }
 .foot{
+  color: white;
   text-align: center;
   grid-area: foot;
   background-color: #0066cc;
@@ -82,6 +82,9 @@ form{
   font-size: 22px;
 }
 #maxDist{
+  font-size: 22px;
+}
+#yourRoute{
   font-size: 22px;
 }
 
@@ -127,7 +130,7 @@ form{
     margin-top: 100px;
   }
 }
-@media screen and (max-width: 447px){
+@media screen and (max-width: 430px){
   .head{
     height: 120px;
   }
@@ -152,7 +155,7 @@ form{
   font-size: 22;
 }
 #submit{
-  font-family: lato;
+  color: white;
   background-color: #0066cc;
   border: none;
   padding: 5px;
@@ -164,7 +167,7 @@ form{
   box-shadow: 0 4px 6px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 #routeSearch{
-  font-family: lato;
+  color: white;
   font-style: normal;
   display: flex;
   margin: 10px;
@@ -192,6 +195,7 @@ section{
   margin-left: 5px;
 }
 #toDo{
+  color: white;
   padding: 5px;
   display: flex;
   margin: 10px;

@@ -116,8 +116,8 @@ var lat = ''
 var long = ''
 function initMap() {
   var myLocation = {
-    lat: 40.016,
-    lng: -105.281
+    lat: 40.0149856,
+    lng: -105.27054559999999
   };
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
@@ -134,7 +134,6 @@ function initMap() {
     var address = document.getElementById('address').value;
     geocoder.geocode({
       'address': address,
-      // 'location': LatLng
     }, function(results, status) {
       if (status === 'OK') {
         resultsMap.setCenter(results[0].geometry.location);
@@ -144,8 +143,6 @@ function initMap() {
           zoom: 15,
           location: location
         });
-        console.log(marker.position.lat())
-        console.log(marker.position.lng());
         lat = marker.position.lat()
         long = marker.position.lng()
       } else {
@@ -153,7 +150,6 @@ function initMap() {
       }
     });
   }
-  console.log(geocoder)
   document.getElementById('submit').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
   });
